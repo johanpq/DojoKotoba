@@ -1,0 +1,22 @@
+<header>
+  @if (isBrowser) {
+    <h1>DojoKotoba</h1>
+
+    @if (auth?.isLoading$ | async) {
+      <div>Loading...</div>
+    }
+
+    @if (auth?.error$ | async; as error) {
+      <div>{{ error.message }}</div>
+    }
+
+    @if (auth?.isAuthenticated$ | async) {
+      <app-profile></app-profile>
+      <!-- <app-logout-button></app-logout-button> -->
+    } @else {
+      <app-login-button></app-login-button>
+    }
+
+  }
+
+</header>

@@ -4,12 +4,20 @@ import { AuthService } from '@auth0/auth0-angular';
 @Component({
   selector: 'app-login-button',
   standalone: true,
+  styles: [`
+    .btn {
+      @media (max-width: 768px) {
+        padding: .7rem;
+      }
+    }
+
+  `],
   template: `
     <button
       (click)="loginWithRedirect()"
-      class="button login"
+      class="button login btn"
     >
-      Log In
+      Entrar
     </button>
   `
 })

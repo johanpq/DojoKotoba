@@ -1,0 +1,139 @@
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+
+  img {
+    height: 250px;
+    width: 250px;
+
+    @media (max-width: 768px) {
+      height: 150px;
+      width: 150px;
+      margin-bottom: 2rem;
+    }
+  }
+
+  div {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    top: -50px;
+
+    h2 {
+      color: #5E241A;
+      font-weight: 400;
+    }
+
+    img {
+      height: 50px;
+      width: 60px;
+      position: relative;
+      top: -8px;
+
+      &:last-child {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  section {
+    position: relative;
+    height: 0;
+    margin-bottom: 5rem;
+    width: 100%;
+
+    img {
+      position: relative;
+      top: -140px;
+      color: rgba(0, 0, 0, 0.904);
+      width: 100%;
+    }
+
+    @media (max-width: 768px) {
+      margin-bottom: 0;
+    }
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    width: 40%;
+    justify-content: space-around;
+    align-items: flex-start;
+    color: #5e241aec;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      width: 10%;
+      gap: .7rem;
+
+      h3 {
+        color: #5E241A;
+      }
+
+      li {
+        cursor: pointer;
+
+        &:hover {
+          text-decoration: underline;
+          color: #5E241A;
+        }
+      }
+
+      a {
+        color: #5e241aec;
+        text-decoration: none;
+
+        img {
+          height: 24px;
+          width: 24px;
+          transform: translate(0, 0);
+
+          @media (max-width: 768px) {
+            height: 20px;
+            width: 20px;
+          }
+        }
+
+        &:hover {
+          text-decoration: underline;
+          color: #5E241A;
+        }
+      }
+
+      /* SEÇÃO DO SUPORTE */
+      &:last-child {
+        display: flex;
+        flex-direction: column;
+
+        li {
+          display: flex;
+          flex-direction: row;
+          width: 100%;
+          gap: 1rem;
+        }
+      }
+    }
+
+    @media (max-width: 768px) {
+      width: 100%;
+      justify-content: center;
+      gap: 2rem;
+      font-size: .9rem;
+    }
+  }
+
+  hr {
+    min-width: 20%;
+    color: #5e241a1c;
+  }
+
+  p {
+    color: #5E241A;
+    margin-top: 1rem;
+  }
+}

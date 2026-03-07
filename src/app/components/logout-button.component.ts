@@ -8,6 +8,7 @@ import { AuthService } from '@auth0/auth0-angular';
     <button
       (click)="logout()"
       class="button logout"
+      style="width: 10rem; padding: .8rem;"
     >
       Log Out
     </button>
