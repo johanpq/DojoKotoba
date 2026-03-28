@@ -20,7 +20,7 @@ export const authGuard: CanActivateFn = (_, state) => {
     map((isAuthenticated) => {
 
       // se estiver autenticado mas estiver na rota /
-      if (isAuthenticated && state.url === '/') {
+      if (isAuthenticated && state.url === '/' || state.url === 'https://dojo-kotoba.vercel.app/') {
         return router.createUrlTree(['/explorar']);
       }
 
