@@ -1,14 +1,13 @@
 import { Component } from '@angular/core';
 import { ModalFeedback } from "../../../modal/modal-feedback/modal-feedback";
 import { QuizService } from './quiz.service';
-import { NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'app-karate-quiz',
   standalone: true,
   templateUrl: './quiz.html',
   styleUrls: ['./quiz.css'],
-  imports: [ModalFeedback, NgOptimizedImage]
+  imports: [ModalFeedback]
 })
 export class QuizComponent {
   constructor(
