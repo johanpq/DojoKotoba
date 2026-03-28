@@ -16,7 +16,18 @@ export class QuizComponent {
   options: any[] = [];
 
   ngOnInit() {
+    this.preloadAllImages();
     this.generateQuestion();
+  }
+
+  // Função para baixar as imagens antes do usuário chegar nelas
+  preloadAllImages() {
+    this.quiz.contents.karateTerms.forEach(term => {
+      if (term.imageUrl) {
+        const img = new Image();
+        img.src = term.imageUrl;
+      }
+    });
   }
 
   generateQuestion() {
