@@ -16,7 +16,7 @@
       <div>✖ {{getWrongQuestions}}</div>
     </div>
 
-    <img [src]="quiz.currentQuestion.imageUrl" [alt]="quiz.currentQuestion.japanese">
+    <img [ngSrc]="quiz.currentQuestion.imageUrl" [alt]="quiz.currentQuestion.japanese">
 
     <p>{{ quiz.currentQuestion.japanese }}</p>
 

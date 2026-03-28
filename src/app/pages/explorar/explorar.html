@@ -1,7 +1,7 @@
 <app-header></app-header>
 
 <section class="upper-section">
-  
+
 
   <h2>Explorar</h2>
 
@@ -26,8 +26,8 @@
 
 <section class="card-container">
   @if (selectedCategory) {
-    @for (item of karateTermsFunc; track $index) {
-      <app-kotoba-cards style="width: 10rem;" [title]="item.japanese" [meaning]="item.meaning" [category]="item.category" [imageUrl]="item.imageUrl"></app-kotoba-cards>
+    @for (item of karateTermsFunc; track item.japanese; let i = $index) {
+      <app-kotoba-cards style="width: 10rem;" [title]="item.japanese" [meaning]="item.meaning" [category]="item.category" [imageUrl]="item.imageUrl" [isPriority]="i < 8"></app-kotoba-cards>
     }
   }
 </section>
