@@ -9,11 +9,11 @@
   align-items: center;
   flex-wrap: wrap;
   width: 100%;
-  gap: 5rem;
+  /* gap: 5rem;
 
   @media (max-width: 568px) {
     gap: 2rem;
-  }
+  } */
 }
 
 .container-content {
