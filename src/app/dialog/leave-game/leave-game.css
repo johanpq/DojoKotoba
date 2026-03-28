@@ -1,0 +1,27 @@
+.container {
+  display: block;
+  background-image: linear-gradient(45deg, #0000004a, transparent);
+  width: 100%;
+  padding: 1rem;
+  overflow: hidden;
+
+  h2 {
+    font-weight: 500;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    color: rgb(236, 85, 85);
+    margin-bottom: 1rem;
+  }
+
+}
+
+.container-btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  gap: .5rem;
+}

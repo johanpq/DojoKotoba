@@ -1,0 +1,148 @@
+.container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 30rem;
+  width: 55%;
+  border: 1px solid #0095ff00;
+  border-radius: 5px;
+  box-shadow: 0px 0px 8px 1px #87626252;
+  transition: width .5s ease-in-out;
+
+  @media (max-width: 1000px) {
+    width: 75%;
+  }
+
+  @media (max-width: 768px) {
+    border: none;
+    box-shadow: none;
+    width: 95%;
+  }
+}
+
+.container-content {
+  display: flex;
+  position: relative;
+  gap: 2rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+
+  h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+  }
+
+  img {
+    height: 150px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+
+  p {
+    font-size: 1.5rem;
+    margin: 0rem 0;
+  }
+}
+
+.container-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+  gap: 1.5rem;
+  text-align: center;
+
+  button {
+    height: 5rem;
+    width: 9rem;
+    font-weight: 600;
+    background-image: linear-gradient(45deg, #0000002e, transparent);
+    color: #000000cf;
+    border: 1px solid #ff030336;
+    border-radius: 5px;
+    box-shadow: 0px 0px 8px 1px #ff000038;
+    padding: .7rem;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 1268px) {
+      width: 7rem;
+    }
+
+    @media (max-width: 1000px) {
+      height: 4.5rem;
+      width: 50%;
+    }
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    width: 70%;
+  }
+
+  @media (max-width: 768px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* @media (max-width: 568px) {
+    width: 90%;
+    gap: .5rem;
+  } */
+}
+
+.container-view{
+  display: flex;
+  gap: 2rem;
+  font-size: .9rem;
+  color: #555;
+  margin-top: -1rem;
+  transition: right .5s ease-in-out;
+
+
+  @media (max-width: 1190px) {
+    right: 2.8rem;
+  }
+
+  @media (max-width: 1000px) {
+    right: 3rem;
+  }
+
+  @media (max-width: 840px) {
+    right: 1rem;
+  }
+
+  @media (max-width: 510px) {
+    top: -5px;
+    right: .5rem;
+  }
+}
+
+.progress-bar{
+  margin-top: -1.5rem;
+  width: 70%;
+  height: 10px;
+  background: #e5e5e5;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-fill{
+  height: 100%;
+  background: linear-gradient(90deg, #4f46e5, #3b82f6);
+  width: 0%;
+  transition: width .4s ease;
+}

@@ -1,0 +1,20 @@
+<div class="container" (click)="toogleCardFunc()">
+
+  <div class="card-inner" [class.animation-flip-card]="toogleCard">
+
+    <div class="card-front" [style.background-image]="'url(' + imageUrl + ')'">
+      <div class="container-bottom">
+        <p>{{title}}</p>
+      </div>
+    </div>
+
+    <div class="card-back">
+      <p>{{meaning}}</p>
+      <div class="container-bottom">
+        <p>{{title}}</p>
+      </div>
+    </div>
+
+  </div>
+
+</div>

@@ -11,6 +11,32 @@
     }
 
     @if (auth?.isAuthenticated$ | async) {
+      <nav class="nav">
+        <div class="wrapper-nav-elements">
+          <a
+            style="cursor: pointer;"
+            (click)="changeRoute('Explorar')"
+            routerLink="/explorar"
+            [routerLinkActiveOptions]="{ exact: true }"
+            routerLinkActive="active-route">
+
+            Explorar
+          </a>
+
+          <a
+            style="cursor: pointer;"
+            (click)="changeRoute('Jogos')"
+            routerLink="/games"
+            routerLinkActive="active-route">
+              Jogos
+          </a>
+        </div>
+
+        <span class="icon">
+          <app-bottom-sheet></app-bottom-sheet>
+        </span>
+
+      </nav>
       <app-profile></app-profile>
       <!-- <app-logout-button></app-logout-button> -->
     } @else {

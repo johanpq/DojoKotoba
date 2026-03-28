@@ -8,12 +8,38 @@ import { LogoutButtonComponent } from "./logout-button.component";
   standalone: true,
   imports: [CommonModule, LogoutButtonComponent],
   styles: [`
+    .profile-container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: .5rem;
+      cursor: pointer;
+
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+
     .profile-modal {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: .5rem;
+      position: absolute;
+      background-image: linear-gradient(1deg, #00000085, #0000ff26, transparent);
+      border: 1px solid #0000003d;
+      box-shadow: 0 0 5px 1px #5e241a67;
+      border-radius: 5px;
+      width: 12.9rem;
+      right: 2rem;
+      margin-top: .5rem;
+      z-index: 5;
+
       @media (max-width: 1024px) {
         right: 1rem;
       }
     }
-
   `],
   template: `
     @if (auth.isLoading$ | async) {
@@ -23,7 +49,7 @@ import { LogoutButtonComponent } from "./logout-button.component";
     @if ((auth.isAuthenticated$ | async) && (auth.user$ | async); as user) {
       <div style="display: flex; flex-direction: row; align-items: center; gap: 1rem;">
         @if (user.picture) {
-          <div style="display: flex; flex-direction: row; align-items: center; gap: .5rem; cursor: pointer;" (click)="funcToogleModal()">
+          <div class="profile-container" (click)="funcToogleModal()">
             <img
               [src]="user.picture"
               [alt]="user.name || 'User'"
@@ -36,7 +62,7 @@ import { LogoutButtonComponent } from "./logout-button.component";
                 border: 3px solid #5E241A;
               "
             />
-            <div>{{truncateValue(user.name, 10)}}</div>
+            <div style="font-weight: 600;">{{truncateValue(user.name, 10)}}</div>
 
             <img style="height: 14px; width: 14px;" src="./toogle.png" alt="Toggle">
           </div>
@@ -69,7 +95,7 @@ import { LogoutButtonComponent } from "./logout-button.component";
     <!-- MODAL -->
 
     @if ((toogleModal) && (auth.isAuthenticated$ | async) && (auth.user$ | async); as user) {
-      <div class="profile-modal" style="display: flex; justify-content: center; align-items: center; flex-direction: column; gap: .5rem; position: absolute; background-color: white; border-radius: 5px; width: 12rem; margin-top: .5rem;">
+      <div class="profile-modal">
         <img
           [src]="user.picture"
           [alt]="user.name || 'User'"
@@ -84,12 +110,14 @@ import { LogoutButtonComponent } from "./logout-button.component";
           "
         />
 
-        <p style="font-size: .8rem; color: #5e241ab7; font-weight: 600;">Nome: {{user.name}}</p>
+        <p style="font-size: .8rem; color: #5e241ab7; font-weight: 600;">Nome: {{truncateValue(user.name, 10)}}</p>
         <p style="font-size: .8rem; color: #5e241ab7; font-weight: 600;">Email: {{user.email}}</p>
 
         <hr style="height: 1px; width: 80%;">
 
         <app-logout-button></app-logout-button>
+
+        <span style="margin-bottom: .2rem;"></span>
       </div>
     }
   `

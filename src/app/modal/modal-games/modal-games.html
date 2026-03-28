@@ -1,0 +1,12 @@
+@if (gameController.isGameRender) {
+  <div class="container">
+
+    <span (click)="openLeaveDialog()">
+      <ng-icon class="icon" name="heroXMark" size="24"></ng-icon>
+    </span>
+
+    <!-- <app-karate-quiz></app-karate-quiz> -->
+    <ng-container *ngComponentOutlet="gameComponent"></ng-container>
+
+  </div>
+}

@@ -1,0 +1,32 @@
+.container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  /* filter: blur(5px); */
+  background-color: white;
+  background-image: url('/bg-secondary.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat;
+  height: 98%;
+  width: 95%;
+  border: 1px solid #0000003b;
+  border-radius: 10px;
+  box-shadow: 1px 1px 20px 20px #00000036;
+  z-index: 20;
+}
+
+.icon {
+  display: block;
+  position: absolute;
+  top: 2px;
+  right: 5px;
+  cursor: pointer;
+  transition: transform .3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}

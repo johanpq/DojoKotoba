@@ -6,13 +6,27 @@
   margin: 0;
   box-sizing: border-box;
 }
+
 body {
   background-image: url(/bg.png);
-  background-size: cover;
-  
+  background-size: contain;
+  background-repeat: repeat;
   background-color: #FFFFFF;
   max-width: 1250px;
   margin: auto;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.24);
+  pointer-events: none;
+}
+
+a {
+  color: black;
+  text-decoration: none;
 }
 
 .app-container {

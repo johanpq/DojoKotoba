@@ -1,13 +1,71 @@
 header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
   gap: 2.5rem;
   padding: .5em;
+  z-index: 10;
+  transition: all .5s ease-in-out;
 
   h1 {
     color: #5E241A;
     font-size: 2.5rem;
     font-weight: bold;
+
+    @media (max-width: 768px) {
+      font-size: 1.8rem;
+    }
   }
+  @media (max-width: 768px) {
+    gap: .5rem;
+  }
+}
+
+.nav {
+  display: flex;
+  gap: 2rem;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 1.5rem;
+  width: 100%;
+  margin-right: 1rem;
+
+  a {
+    /* color: rgb(78, 78, 228); */
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  @media (max-width: 768px) {
+    /* justify-content: center; */
+    gap: 0;
+  }
+}
+
+.wrapper-nav-elements {
+  display: flex;
+  background-color: #ffd4cb75;
+  gap: 2rem;
+  border: 1px solid #5e241a52;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px 2px #5e241a62;
+  padding: .5rem;
+}
+
+a.active-route {
+  color: #5E241A;
+  font-weight: 700;
+}
+
+.icon {
+  display: none;
+
+  @media (max-width: 768px) {
+    display: block;
+    width: 10%;
+  }
+
 }

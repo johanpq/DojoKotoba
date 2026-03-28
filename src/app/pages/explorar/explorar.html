@@ -1,0 +1,35 @@
+<app-header></app-header>
+
+<section class="upper-section">
+  
+
+  <h2>Explorar</h2>
+
+  <p>- - - Termos do Karatê - - -</p>
+
+  <div>
+    <input (input)="onSearch($event)" type="text" name="Search" id="ISearch" placeholder="Buscar termo...">
+
+    <img src="/lupa.png" alt="Lupa">
+
+    <section class="btns-section">
+      @for (item of categories; track item) {
+        <button
+        (click)="changeCategory(item)"
+        [class.active-btn] = "item === selectedCategory">{{item}}</button>
+      }
+    </section>
+  </div>
+</section>
+
+<hr class="hr">
+
+<section class="card-container">
+  @if (selectedCategory) {
+    @for (item of karateTermsFunc; track $index) {
+      <app-kotoba-cards style="width: 10rem;" [title]="item.japanese" [meaning]="item.meaning" [category]="item.category" [imageUrl]="item.imageUrl"></app-kotoba-cards>
+    }
+  }
+</section>
+
+<app-footer></app-footer>

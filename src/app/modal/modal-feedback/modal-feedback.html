@@ -1,0 +1,41 @@
+<div class="modal-overlay">
+
+  <div class="modal-result">
+
+    <h2>Resultado</h2>
+
+    <div class="result-stats">
+
+      <div class="stat">
+        <span>Total</span>
+        <strong>{{getTotalQuestions}}</strong>
+      </div>
+
+      <div class="stat correct">
+        <span>✔ Corretas</span>
+        <strong>{{getCorrectQuestions}}</strong>
+      </div>
+
+      <div class="stat wrong">
+        <span>✖ Erradas</span>
+        <strong>{{getWrongQuestions}}</strong>
+      </div>
+
+    </div>
+
+    <div class="score">
+      {{scorePercentage}}%
+    </div>
+
+    <p class="result-text">
+      {{resultMessage}}
+    </p>
+
+    <div class="modal-actions">
+      <button (click)="resetQuiz()" class="reset">Refazer</button>
+      <button (click)="exitGame()" class="back">Voltar</button>
+    </div>
+
+  </div>
+
+</div>
