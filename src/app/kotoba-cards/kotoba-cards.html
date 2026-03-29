@@ -3,11 +3,14 @@
 
     <div class="card-front">
       <img [ngSrc]="imageUrl"
-        fill
-        [priority]="isPriority"
-        alt="Card front"
-        style="object-fit: cover;"> <div class="container-bottom">
+           fill
+           [priority]="isPriority"
+           alt="Card front"
+           style="object-fit: cover;">
+
+      <div class="container-bottom">
         <p>{{title}}</p>
+      </div>
     </div>
 
     <div class="card-back">

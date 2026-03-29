@@ -2,10 +2,9 @@
 
 <section class="upper-section">
 
-
   <h2>Explorar</h2>
 
-  <p>- - - Termos do Karatê - - -</p>
+  <p class="description">- - - Termos do Karatê - - -</p>
 
   <div>
     <input (input)="onSearch($event)" type="text" name="Search" id="ISearch" placeholder="Buscar termo...">
@@ -19,7 +18,18 @@
         [class.active-btn] = "item === selectedCategory">{{item}}</button>
       }
     </section>
+
   </div>
+
+ 
+  <div class="info-image"> 
+    <span>
+      <ng-icon class="icon" name="heroInformationCircle" size="26"></ng-icon> 
+    </span>
+    <span>As imagens são meramente ilustrativas</span>
+  </div>
+
+
 </section>
 
 <hr class="hr">
@@ -27,7 +37,7 @@
 <section class="card-container">
   @if (selectedCategory) {
     @for (item of karateTermsFunc; track item.japanese; let i = $index) {
-      <app-kotoba-cards style="width: 10rem;" [title]="item.japanese" [meaning]="item.meaning" [category]="item.category" [imageUrl]="item.imageUrl" [isPriority]="i < 8"></app-kotoba-cards>
+      <app-kotoba-cards style="width: 10rem;" [title]="item.japanese" [meaning]="item.meaning" [category]="item.category" [imageUrl]="item.imageUrl" [isPriority]="i < 5"></app-kotoba-cards>
     }
   }
 </section>

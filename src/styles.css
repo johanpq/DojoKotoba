@@ -14,6 +14,10 @@ body {
   background-color: #FFFFFF;
   max-width: 1250px;
   margin: auto;
+
+  /* Adicione isso para criar um contexto de empilhamento */
+  position: relative;
+  min-height: 100vh;
 }
 
 body::before {
@@ -22,6 +26,9 @@ body::before {
   inset: 0;
   background: rgba(255, 255, 255, 0.24);
   pointer-events: none;
+
+  /* Isso joga o overlay para trás de todos os elementos (botões, cards, textos) */
+  z-index: -1;
 }
 
 a {
