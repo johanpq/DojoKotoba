@@ -78,6 +78,10 @@
   color: rgb(0, 19, 44);
   margin-top: 1.5rem;
   white-space: nowrap;
+
+  @media (max-width: 568px) {
+    font-size: 1.1rem;
+  }
 }
 
 .hr {

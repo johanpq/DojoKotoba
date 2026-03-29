@@ -25,7 +25,6 @@ main {
 
       button {
         min-width: 10rem;
-        color: #212529;
         font-size: 1rem;
         font-weight: 700;
         padding: .8rem 1.2rem;
@@ -33,20 +32,10 @@ main {
         border-radius: 8px;
         cursor: pointer;
 
-
-        &:first-child {
-          color: white;
-          background-color: #ff0000cc;
-        }
-
-        &:first-child:hover {
-          background-color: #ff0000f6;
-        }
-
-        &:hover {
+        /* &:hover {
           background-color: #a19e9ecc;
           transform: scale(1);
-        }
+        } */
       }
     }
   }
@@ -123,4 +112,17 @@ main {
       width: 95%;
     }
   }
+}
+
+.explore-btn {
+  color: white;
+  background-color: #ff0000cc;   
+
+  &:hover {
+    background-color: #ff0000f6;
+  }
+}
+
+.jogo-btn {
+  background-color: rgb(248, 239, 228);
 }

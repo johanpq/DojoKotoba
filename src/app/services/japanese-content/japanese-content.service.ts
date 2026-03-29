@@ -47,15 +47,15 @@ export class JapaneseContent {
     { category: "Golpes", japanese: "Hiza geri", meaning: "Joelhada", imageUrl: "/cards-webp/chutes/hiza-geri.webp" },
 
     /* GOLPES */
-    { category: "Golpes", japanese: "Shuto uchi", meaning: "Golpe de mão aberta", imageUrl: "/cards/shuto-uchi.png" },
-    { category: "Golpes", japanese: "Teisho uchi", meaning: "Golpe com a palma da mão", imageUrl: "/cards/teisho-uchi.png" },
-    { category: "Golpes", japanese: "Uraken uchi", meaning: "Golpe com dorso do punho", imageUrl: "/cards/uraken-uchi.png" },
-    { category: "Golpes", japanese: "Tetsui uchi", meaning: "Golpe com a lateral do punho", imageUrl: "/cards/uraken-uchi.png" },
+    { category: "Golpes", japanese: "Shuto uchi", meaning: "Golpe de mão aberta", imageUrl: "/cards-webp/golpes/shuto-uchi.webp" },
+    { category: "Golpes", japanese: "Teisho uchi", meaning: "Golpe com a palma da mão", imageUrl: "/cards-webp/golpes/teisho-uchi.webp" },
+    { category: "Golpes", japanese: "Uraken uchi", meaning: "Golpe com dorso do punho", imageUrl: "/cards-webp/golpes/uraken-uchi.webp" },
+    { category: "Golpes", japanese: "Tetsui uchi", meaning: "Golpe com a lateral do punho", imageUrl: "/cards-webp/golpes/uraken-uchi.webp" },
 
     // =========================
     // BASES
     // =========================
-    { category: "Comandos", japanese: "Seiza", meaning: "Sentar-se em posição formal", imageUrl: "/cards-webp/bases/seiza.webp" },
+    { category: "Posições", japanese: "Seiza", meaning: "Sentar-se em posição formal", imageUrl: "/cards-webp/bases/seiza.webp" },
     { category: "Posições", japanese: "Heiko dachi", meaning: "Posição paralela", imageUrl: "/cards-webp/bases/heiko-dachi.webp" },
     { category: "Posições", japanese: "Musubi dachi", meaning: "Pés juntos (posição de cumprimento)", imageUrl: "/cards-webp/bases/musubi-dachi.webp" },
     { category: "Posições", japanese: "Zenkutsu dachi", meaning: "Base avançada / frontal", imageUrl: "/cards-webp/golpes/oi-zuki.webp" },
