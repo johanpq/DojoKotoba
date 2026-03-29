@@ -29,7 +29,7 @@ import { LogoutButtonComponent } from "../components/logout-button.component";
     .profile-container {
       display: flex;
       align-items: center;
-      gap: 2rem;
+      gap: 3.1rem;
       margin-top: 2rem;
     }
 
