@@ -27,7 +27,7 @@ footer {
       font-weight: 400;
 
       span {
-        color: var(--primary);
+        color: var(--text-red);
       }
     }
 
@@ -98,7 +98,7 @@ footer {
         }
 
         &:hover {
-          color: var(--accent);
+          color: var(--text-red);
           text-decoration: underline;
         }
       }

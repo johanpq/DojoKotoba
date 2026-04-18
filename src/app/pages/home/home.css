@@ -109,14 +109,14 @@ main {
     position: absolute;
     height: 2px;
     width: 50%;
-    background-color: var(--primary-hover);
+    background-color: var(--text-red);
     bottom: -10px;
   }
 }
 
 .explore-btn {
   color: white;
-  background-color: var(--primary);
+  background-color: var(--text-red);
 
   &:hover {
     background-color: var(--primary-hover);

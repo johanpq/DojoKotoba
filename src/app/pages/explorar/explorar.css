@@ -95,7 +95,7 @@
 
 .active-btn {
   color: var(--text-main);
-  background-color: #7C3AED;
+  background-color: var(--text-red);
 }
 
 .card-container {
