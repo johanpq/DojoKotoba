@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { Header } from "../../header/header";
 import { Footer } from "../../footer/footer";
 import { JapaneseContent } from '../../services/japanese-content/japanese-content.service';
+import { IntroduceKarateHome } from "../../introduce-karate-home/introduce-karate-home";
 
 @Component({
   selector: 'app-home',
-  imports: [Header, Footer],
+  imports: [Header, Footer, IntroduceKarateHome],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })

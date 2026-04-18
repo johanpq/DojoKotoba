@@ -1,21 +1,45 @@
+@keyframes bounce {
+  from {
+    transform: translate(0);
+  }
+  to {
+    transform: translateY(-10px);
+  }
+}
+
 main {
+  overflow: auto;
+
   section {
     display: flex;
+    position: relative;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
     width: 100%;
     margin-bottom: 2.2rem;
 
+    img {
+      height: 550px;
+      width: 55%;
+      object-fit: contain;
+      border-radius: 30%;
+      transition: height, width .3s ease-in-out;
+      animation: bounce 2s linear infinite alternate;
 
-    h2 {
-      font-size: 1.6rem;
-      margin-top: 2rem;
-    }
+      @media (max-width: 768px) {
+        position: absolute;
+        top: 30px;
+        right: 10px;
+        height: 100px;
+        width: 10rem;
+      }
 
-    p {
-      color: rgb(51, 51, 51);
-      margin-top: 1rem;
+      @media (max-width: 668px) {
+        height: 60px;
+        width: 5rem;
+        top: 130px;
+      }
     }
 
     div {
@@ -31,12 +55,11 @@ main {
         border: 1px solid rgba(0, 0, 0, 0.295);
         border-radius: 8px;
         cursor: pointer;
-
-        /* &:hover {
-          background-color: #a19e9ecc;
-          transform: scale(1);
-        } */
       }
+    }
+
+    @media (max-width: 768px) {
+      flex-direction: column;
     }
   }
 
@@ -49,80 +72,130 @@ main {
       max-width: 95%;
     }
   }
+}
 
-  div {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    max-width: 40%;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    margin: 1rem auto 0 auto;
+/* HERO */
+.container-hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-    button {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: .8rem .9rem;
-      max-width: 100%;
-      margin-bottom: 1rem;
-      border: 1px solid rgba(0, 0, 0, 0.233);
-      border-radius: 3px;
-      cursor: pointer;
+  p {
+    color: var(--text-secondary);
+    margin-top: 1rem;
+  }
+}
 
+.container-title-hero-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
 
-      img {
-        height: 100px;
-        width: 100px;
+  h2 {
+    font-size: 3.5rem;
+    text-align: center;
+    color: #E2E8F0;
+    line-height: 4rem;
 
-        @media (max-width: 768px) {
-          height: 80px;
-          width: 70px;
-        }
-      }
-
-      div {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-
-        p {
-          color: rgb(71, 71, 71);
-        }
-      }
-
-      &:hover {
-        transform: scale(1.1);
-      }
-
-      @media (max-width: 768px) {
-        padding: 0 0.4rem;
-      }
+    @media (max-width: 768px) {
+      font-size: 2.5rem;
     }
+  }
 
-    @media (max-width: 1000px) {
-      max-width: 60%;
-    }
-
-    @media (max-width: 700px) {
-      max-width: 80%;
-    }
-
-    @media (max-width: 540px) {
-      width: 95%;
-    }
+  span {
+    position: absolute;
+    height: 2px;
+    width: 50%;
+    background-color: var(--primary-hover);
+    bottom: -10px;
   }
 }
 
 .explore-btn {
   color: white;
-  background-color: #ff0000cc;   
+  background-color: var(--primary);
 
   &:hover {
-    background-color: #ff0000f6;
+    background-color: var(--primary-hover);
   }
 }
 
 .jogo-btn {
-  background-color: rgb(248, 239, 228);
+  background-color: var(--text-main);
+
+  &:hover {
+    background-color: var(--text-secondary);
+  }
 }
+
+.container-items {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  margin-top: 5rem;
+  gap: 4rem;
+}
+
+.container-items > div,
+.container-items-reverse {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 92%;
+  max-width: 1100px;
+  gap: 2rem;
+  padding: 0 2rem;
+}
+
+.container-items img,
+.container-items-reverse img {
+  height: 500px;
+  width: 22rem;
+  object-fit: contain;
+  position: static;
+}
+
+/* reverse */
+.container-items-reverse {
+  flex-direction: row-reverse;
+}
+
+.container-info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: flex-start;
+  gap: 2rem;
+
+  h2 {
+    font-size: 3rem;
+    color: var(--text-main);
+  }
+
+  p {
+    color: var(--text-secondary);
+  }
+}
+
+@media (max-width: 768px) {
+  .container-items > div,
+  .container-items-reverse {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .container-info {
+    align-items: center;
+  }
+
+  .container-items img,
+  .container-items-reverse img {
+    height: 300px;
+    width: auto;
+  }
+}
+

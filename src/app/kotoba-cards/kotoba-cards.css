@@ -11,7 +11,7 @@
 
 .container-bottom {
   position: absolute;
-  color: red;
+  color: #7C3AED;
   font-weight: 700;
   font-size: 1.1rem;
   bottom: -30px;
@@ -58,4 +58,20 @@
   font-weight: 600;
   background: white;
   transform: rotateY(180deg);
+}
+
+.card-front .container-bottom {
+  opacity: 1;
+}
+
+.card-back .container-bottom {
+  opacity: 0;
+}
+
+.animation-flip-card .card-front .container-bottom {
+  opacity: 0;
+}
+
+.animation-flip-card .card-back .container-bottom {
+  opacity: 1;
 }

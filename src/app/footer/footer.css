@@ -23,8 +23,12 @@ footer {
     top: -50px;
 
     h2 {
-      color: #5E241A;
+      color: white;
       font-weight: 400;
+
+      span {
+        color: var(--primary);
+      }
     }
 
     img {
@@ -63,7 +67,6 @@ footer {
     width: 40%;
     justify-content: space-around;
     align-items: flex-start;
-    color: #5e241aec;
 
     div {
       display: flex;
@@ -72,20 +75,15 @@ footer {
       gap: .7rem;
 
       h3 {
-        color: #5E241A;
+        color: var(--text-main);
       }
 
       li {
         cursor: pointer;
-
-        &:hover {
-          text-decoration: underline;
-          color: #5E241A;
-        }
       }
 
       a {
-        color: #5e241aec;
+        color: var(--text-main);
         text-decoration: none;
 
         img {
@@ -100,8 +98,8 @@ footer {
         }
 
         &:hover {
+          color: var(--accent);
           text-decoration: underline;
-          color: #5E241A;
         }
       }
 
@@ -133,7 +131,7 @@ footer {
   }
 
   p {
-    color: #5E241A;
+    color: var(--text-main);
     margin-top: 1rem;
   }
 }

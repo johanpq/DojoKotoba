@@ -1,6 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
+:root {
+  --bg-main: #020617;
+  --bg-secondary: #0F172A;
+
+  --primary: #7C3AED;
+  --primary-hover: #6D28D9;
+
+  --accent: #22D3EE;
+
+  --text-main: #E2E8F0;
+  --text-secondary: #CBD5F5;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -8,31 +21,14 @@
 }
 
 body {
-  background-image: url(/bg.png);
-  background-size: contain;
-  background-repeat: repeat;
-  background-color: #FFFFFF;
+  background-color: #020617;
+  /* border: 1px solid #6D28D9; */
   max-width: 1250px;
   margin: auto;
-
-  /* Adicione isso para criar um contexto de empilhamento */
-  position: relative;
-  min-height: 100vh;
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background: rgba(255, 255, 255, 0.24);
-  pointer-events: none;
-
-  /* Isso joga o overlay para trás de todos os elementos (botões, cards, textos) */
-  z-index: -1;
 }
 
 a {
-  color: black;
+  color: var(--text-main);
   text-decoration: none;
 }
 

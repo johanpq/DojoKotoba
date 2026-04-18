@@ -27,9 +27,9 @@ import { LogoutButtonComponent } from "./logout-button.component";
       flex-direction: column;
       gap: .5rem;
       position: absolute;
-      background-image: linear-gradient(1deg, #00000085, #0000ff26, transparent);
+      background-color: var(--bg-secondary);
       border: 1px solid #0000003d;
-      box-shadow: 0 0 5px 1px #5e241a67;
+      box-shadow: 0 0 5px 1px var(--text-main);
       border-radius: 5px;
       width: 12.9rem;
       right: 2rem;
@@ -59,12 +59,12 @@ import { LogoutButtonComponent } from "./logout-button.component";
                 height: 30px;
                 border-radius: 50%;
                 object-fit: cover;
-                border: 3px solid #5E241A;
+                border: 3px solid var(--text-main);
               "
             />
-            <div style="font-weight: 600;">{{truncateValue(user.name, 10)}}</div>
+            <div style="font-weight: 600; color: var(--text-main);">{{truncateValue(user.name, 10)}}</div>
 
-            <img style="height: 14px; width: 14px;" src="./toogle.png" alt="Toggle">
+            <!-- <img style="height: 14px; width: 14px; color: var(--text-main);" src="./toogle.png" alt="Toggle"> -->
           </div>
         }
         <div style="text-align: center;">
@@ -73,7 +73,7 @@ import { LogoutButtonComponent } from "./logout-button.component";
             style="
               font-size: 1rem;
               font-weight: 600;
-              color: #f7fafc;
+              color: #E2E8F0;
               margin-bottom: 0.5rem;
             "
           >
@@ -83,7 +83,7 @@ import { LogoutButtonComponent } from "./logout-button.component";
             class="profile-email"
             style="
               font-size: 1rem;
-              color: #a0aec0;
+              color: #E2E8F0;
             "
           >
             <!-- {{ user.email }} -->
@@ -105,13 +105,13 @@ import { LogoutButtonComponent } from "./logout-button.component";
             height: 50px;
             border-radius: 50%;
             object-fit: cover;
-            border: 3px solid #5E241A;
+            border: 3px solid var(--text-main);
             margin: .5rem 0;
           "
         />
 
-        <p style="font-size: .8rem; color: #5e241ab7; font-weight: 600;">Nome: {{truncateValue(user.name, 10)}}</p>
-        <p style="font-size: .8rem; color: #5e241ab7; font-weight: 600;">Email: {{user.email}}</p>
+        <p style="font-size: .8rem; color: var(--text-main); font-weight: 600;">Nome: {{truncateValue(user.name, 10)}}</p>
+        <p style="font-size: .65rem; color: var(--text-main); font-weight: 600;">Email: {{user.email}}</p>
 
         <hr style="height: 1px; width: 80%;">
 

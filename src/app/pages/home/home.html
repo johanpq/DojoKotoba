@@ -1,7 +1,15 @@
 <app-header></app-header>
-    <main id="/">
-      <section>
-        <h2>Aprenda o japonês do Karatê</h2>
+
+  <main id="/">
+    <!-- CONTAINER -->
+    <section>
+      <div class="container-hero">
+
+        <div class="container-title-hero-content ">
+          <h2>Aprenda o Japonês <br> do Karatê</h2>
+          <span></span>
+        </div>
+
         <p>- - - - - Palavras, comandos e filosófia do dojo - - - - -</p>
 
         <div>
@@ -13,42 +21,24 @@
           </a>
         </div>
 
-      </section>
-      <hr>
-
-      <div>
-        <button>
-          <img src="/tori.png" alt="Monte Tori">
-          <div>
-            <h3>Comandos</h3>
-            <p><strong>{{qntComandos}}</strong> Termos</p>
-          </div>
-        </button>
-
-        <button>
-          <img src="/punch.png" alt="Soco">
-          <div>
-            <h3>Golpes</h3>
-            <p><strong>{{qntGolpes}}</strong> Termos</p>
-          </div>
-        </button>
-
-        <button>
-          <img src="/feet.png" alt="Pés">
-          <div>
-            <h3>Posições</h3>
-            <p><strong>{{qntBases}}</strong> Termos</p>
-          </div>
-        </button>
-
-        <button>
-          <img src="/number-kanji.png" alt="Kanji de número">
-          <div>
-            <h3>Números</h3>
-            <p><strong>{{qntNumeros}}</strong> Termos</p>
-          </div>
-        </button>
       </div>
-      <hr />
-    </main>
+
+      <img src="/phone.webp" alt="Hero Karate">
+
+    </section>
+
+    <!-- SEÇÃO DOS CARDS E JOGOS -->
+
+    <div class="container-items">
+      <app-introduce-karate-home [reverse]="false" title="Golpes do Karatê" description="Aprenda os nomes reais dos golpes em japonês e conecte cada técnica ao seu significado dentro do dojo." tag="Golpes do Karatê" img="/tori-new.webp"></app-introduce-karate-home>
+
+      <app-introduce-karate-home [reverse]="true" title="Posições" description="Entenda as bases do karatê em japonês e desenvolva postura, equilíbrio e estabilidade." tag="Bases do Karatê" img="/punch-blue.webp"></app-introduce-karate-home>
+
+      <app-introduce-karate-home [reverse]="false" title="Comandos do Dojo" description="Domine os comandos utilizados em treinos e graduações, compreendendo o que cada instrução significa e como reagir corretamente em japonês." tag="Comandos do Karatê" img="/karate-comando.webp"></app-introduce-karate-home>
+
+      <app-introduce-karate-home [reverse]="true" title="Números em Japonês" description="Aprenda a contagem usada no karatê para acompanhar treinos, repetições e sequências, tornando sua prática mais natural e imersiva." tag="Números do Karatê" img="/number-new.webp"></app-introduce-karate-home>
+    </div>
+
+  </main>
+
 <app-footer></app-footer>

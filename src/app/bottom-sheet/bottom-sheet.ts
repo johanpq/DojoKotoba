@@ -13,9 +13,6 @@ import { heroBars3 } from '@ng-icons/heroicons/outline';
 import { RouterLink, RouterLinkActive } from "@angular/router";
 import { LogoutButtonComponent } from "../components/logout-button.component";
 
-/**
- * 1. COMPONENTE DA FOLHA (O conteúdo que sobe)
- */
 @Component({
   selector: 'bottom-sheet-overview-example-sheet',
   standalone: true,

@@ -38,10 +38,10 @@ export class ModalGames {
     dialogRef.afterClosed().subscribe(result => {
 
       if(result == true){
-        console.log("Saiu do jogo");
+        /* console.log("Saiu do jogo"); */
         this.quiz.closeGame()
 
-        // 3. Forçar o Angular a atualizar o HTML agora mesmo!
+        // 3. Forçar o Angular a atualizar o HTML!
         this.cdr.detectChanges()
       }
 

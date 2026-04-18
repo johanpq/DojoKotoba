@@ -1,48 +1,51 @@
 <header>
-  @if (isBrowser) {
-    <h1>DojoKotoba</h1>
+  <div class="header-container">
 
-    @if (auth?.isLoading$ | async) {
-      <div>Loading...</div>
-    }
+    @if (isBrowser) {
+      <div class="header-title">
+        <span class="first-part-title">Dojo</span>
+        <span class="second-part-title">Kotoba</span>
+      </div>
 
-    @if (auth?.error$ | async; as error) {
-      <div>{{ error.message }}</div>
-    }
+      @if (auth?.isLoading$ | async) {
+        <div>Loading...</div>
+      }
 
-    @if (auth?.isAuthenticated$ | async) {
-      <nav class="nav">
-        <div class="wrapper-nav-elements">
-          <a
-            style="cursor: pointer;"
-            (click)="changeRoute('Explorar')"
-            routerLink="/explorar"
-            [routerLinkActiveOptions]="{ exact: true }"
-            routerLinkActive="active-route">
+      @if (auth?.error$ | async; as error) {
+        <div>{{ error.message }}</div>
+      }
 
-            Explorar
-          </a>
+      @if (auth?.isAuthenticated$ | async) {
+        <nav class="nav">
+          <div class="wrapper-nav-elements">
+            <a
+              style="cursor: pointer;"
+              (click)="changeRoute('Explorar')"
+              routerLink="/explorar"
+              [routerLinkActiveOptions]="{ exact: true }"
+              routerLinkActive="active-route">
+              Explorar
+            </a>
 
-          <a
-            style="cursor: pointer;"
-            (click)="changeRoute('Jogos')"
-            routerLink="/games"
-            routerLinkActive="active-route">
+            <a
+              style="cursor: pointer;"
+              (click)="changeRoute('Jogos')"
+              routerLink="/games"
+              routerLinkActive="active-route">
               Jogos
-          </a>
-        </div>
+            </a>
+          </div>
 
-        <span class="icon">
-          <app-bottom-sheet></app-bottom-sheet>
-        </span>
+          <span class="icon">
+            <app-bottom-sheet></app-bottom-sheet>
+          </span>
+        </nav>
 
-      </nav>
-      <app-profile></app-profile>
-      <!-- <app-logout-button></app-logout-button> -->
-    } @else {
-      <app-login-button></app-login-button>
+        <app-profile></app-profile>
+      } @else {
+        <app-login-button></app-login-button>
+      }
     }
 
-  }
-
+  </div>
 </header>
