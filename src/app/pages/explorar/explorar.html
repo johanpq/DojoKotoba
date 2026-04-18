@@ -9,7 +9,7 @@
   <div>
     <input (input)="onSearch($event)" type="text" name="Search" id="ISearch" placeholder="Buscar termo...">
 
-    <img src="/lupa.png" alt="Lupa">
+    <ng-icon class="svg-position" name="heroMagnifyingGlass" size="26"></ng-icon>
 
     <section class="btns-section">
       @for (item of categories; track item) {
@@ -21,10 +21,10 @@
 
   </div>
 
- 
-  <div class="info-image"> 
+
+  <div class="info-image">
     <span>
-      <ng-icon class="icon" name="heroInformationCircle" size="26"></ng-icon> 
+      <ng-icon class="icon" name="heroInformationCircle" size="26"></ng-icon>
     </span>
     <span>As imagens são meramente ilustrativas</span>
   </div>

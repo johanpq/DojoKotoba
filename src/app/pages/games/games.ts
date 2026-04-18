@@ -18,7 +18,7 @@ export class Games {
     {
       title: "Quiz de Termos",
       description: "Teste seu conhecimento sobre todos os termos do karatê.",
-      image: "/games/quiz-game.png",
+      image: "/games/quiz-game.webp",
       component: QuizComponent
     },
   ]

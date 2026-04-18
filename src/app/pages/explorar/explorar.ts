@@ -4,14 +4,14 @@ import { KotobaCards } from "../../kotoba-cards/kotoba-cards";
 import { Footer } from "../../footer/footer";
 import { JapaneseContent } from '../../services/japanese-content/japanese-content.service';
 import { provideIcons, NgIcon } from '@ng-icons/core';
-import { heroInformationCircle } from '@ng-icons/heroicons/outline';
+import { heroInformationCircle, heroMagnifyingGlass } from '@ng-icons/heroicons/outline';
 
 @Component({
   selector: 'app-explorar',
   standalone: true,
   imports: [Header, KotobaCards, Footer, NgIcon],
   templateUrl: './explorar.html',
-  providers: [provideIcons({ heroInformationCircle })],
+  providers: [provideIcons({ heroInformationCircle, heroMagnifyingGlass })],
   styleUrl: './explorar.css',
 })
 export class Explorar {

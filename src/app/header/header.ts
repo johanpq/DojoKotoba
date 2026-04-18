@@ -16,7 +16,7 @@ import { BottomSheetOverviewExample } from "../bottom-sheet/bottom-sheet";
     RouterLink,
     RouterModule,
     BottomSheetOverviewExample
-],
+  ],
   templateUrl: './header.html',
   styleUrls: ['./header.css']
 })

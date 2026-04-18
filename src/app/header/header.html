@@ -2,10 +2,11 @@
   <div class="header-container">
 
     @if (isBrowser) {
-      <div class="header-title">
-        <span class="first-part-title">Dojo</span>
-        <span class="second-part-title">Kotoba</span>
-      </div>
+     <a [routerLink]="(auth?.isAuthenticated$ | async) ? '/explorar' : '/'" class="header-title">
+      <span class="first-part-title">Dojo</span>
+      <span class="second-part-title">Kotoba</span>
+    </a>
+
 
       @if (auth?.isLoading$ | async) {
         <div>Loading...</div>

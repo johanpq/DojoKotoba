@@ -2,11 +2,14 @@ import { Component, inject } from '@angular/core';
 import { AuthService } from '@auth0/auth0-angular';
 import { CommonModule } from '@angular/common';
 import { LogoutButtonComponent } from "./logout-button.component";
+import { heroChevronDown } from '@ng-icons/heroicons/outline';
+import { provideIcons, NgIcon } from '@ng-icons/core';
 
 @Component({
   selector: 'app-profile',
   standalone: true,
-  imports: [CommonModule, LogoutButtonComponent],
+  imports: [CommonModule, LogoutButtonComponent, NgIcon],
+  providers: [provideIcons({ heroChevronDown })],
   styles: [`
     .profile-container {
       display: flex;
@@ -40,6 +43,10 @@ import { LogoutButtonComponent } from "./logout-button.component";
         right: 1rem;
       }
     }
+
+    .icon {
+      color: var(--text-main);
+    }
   `],
   template: `
     @if (auth.isLoading$ | async) {
@@ -64,7 +71,7 @@ import { LogoutButtonComponent } from "./logout-button.component";
             />
             <div style="font-weight: 600; color: var(--text-main);">{{truncateValue(user.name, 10)}}</div>
 
-            <!-- <img style="height: 14px; width: 14px; color: var(--text-main);" src="./toogle.png" alt="Toggle"> -->
+            <ng-icon class="icon" name="heroChevronDown" size="16"></ng-icon>
           </div>
         }
         <div style="text-align: center;">

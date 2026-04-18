@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component, inject, Input, Type } from '@angular/core';
+import { ChangeDetectorRef, Component, inject, Input, OnDestroy, OnInit, Type } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { NgIcon } from '@ng-icons/core';
 import { provideIcons } from '@ng-icons/core';
@@ -16,7 +16,7 @@ import { NgComponentOutlet } from '@angular/common';
   providers: [provideIcons({ heroXMark })],
   styleUrl: './modal-games.css',
 })
-export class ModalGames {
+export class ModalGames implements OnInit, OnDestroy {
   @Input() closeThisModal: boolean = false
   @Input() gameComponent!: Type<any>
 
@@ -27,6 +27,16 @@ export class ModalGames {
     public quiz: QuizService,
     public gameController: GameRenderController
   ) {}
+
+  /* Disable scroll when the component is created */
+  ngOnInit(): void {
+    document.body.style.overflow = 'hidden';
+  }
+
+  // Re-enable scroll when the component is destroyed
+  ngOnDestroy(): void {
+    document.body.style.overflow = 'auto';
+  }
 
   openLeaveDialog() {
 
